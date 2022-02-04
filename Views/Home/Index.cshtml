@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Index" enctype="multipart/form-data">
+               
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <p>Upload Your File</p>
+                        <input type="file" name="FileField" />
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" value="Upload" class="btn btn-primary" />
+                </div>
+                @{ if (ViewBag.message != null && ViewBag.message != "") {
+                                <div class="col-md-12">
+                                    <p>
+                                        @ViewBag.message
+                                    </p>
+                                </div>
+                    }
+                }
+                
+            </form>
+        </div>
+    </div>
